@@ -1,0 +1,15 @@
+.div-upload {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn-igtv-upload{
+    background-color: #0095f6;
+    padding: 6px 20px;
+    color: white;
+    border: none;
+    font-weight: bold;
+    border-radius: 4px;
+    font-size: 14px;
+}

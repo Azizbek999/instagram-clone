@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include("partials/head.ejs") %>
+  <body>
+    <%- include("partials/navigator.ejs") %>
+    <div class="close">
+      <a href="/username" class="icon-cancel"><i class="fas fa-times"></i></a>
+    </div>
+    <div class="post-main">
+      <div class="post-center">
+        <div class="post-left">
+          <img src="../img/uploads/<%= post.img %> " alt="" />
+        </div>
+        <div class="post-right">
+          <div class="child-1 post-right-top">
+            <div class="just-div">
+              <img src="../img/avatar.jpg" alt="" />
+              <div>
+                <h3><a href="/username">zairovazizbek</a></h3>
+              </div>
+            </div>
+          </div>
+          <div class="child-2 post-right-center">
+            <h3>Description</h3>
+            <p><%= post.description %></p>
+          </div>
+          <div class="child-3 post-right-before-bottom">
+            <div class="like-disc">
+              <%= post.like %>&nbsp <i class="red fas fa-heart"></i> &nbsp &nbsp
+              <%= post.messagesNum %>&nbsp <i class="blue fas fa-comment"></i>
+            </div>
+          </div>
+          <form action="/username/post/delete/<%= post.id %>" method="post">
+            <div id="remove" class="child-4 delete-post">
+              <button type="submit" class="remove primary">delete</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

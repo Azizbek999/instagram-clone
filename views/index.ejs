@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- head -->
+  <%- include("partials/head.ejs") %>
+  <body>
+    <!-- Navigator -->
+    <%- include("partials/navigator.ejs") %>
+
+    <!-- Main -->
+    <section id="main">
+      <!-- Profile -->
+      <%- include("partials/profile.ejs") %>
+      <!-- Table -->
+      <div id="table">
+        <a href="/username" class="s1 active">POSTS</a>
+        <a href="/username/channel" class="s1">IGTV</a>
+        <a href="/username/saved" class="s1">SAVED</a>
+        <a href="/username/tagged" class="s1">TAGGED</a>
+      </div>
+
+      <!-- Posts -->
+      <div class="posts">
+        <div class="post">
+          <img src="img/f1.jpg" alt="" />
+          <div class="show">
+            <span
+              ><i class="white fas fa-heart"></i> 31 &nbsp &nbsp
+              <i class="white fas fa-comment"></i> 12</span
+            >
+          </div>
+        </div>
+        <div class="post">
+          <img src="img/f2.jpg" alt="" />
+          <div class="show">
+            <span
+              ><i class="white fas fa-heart"></i> 31 &nbsp &nbsp
+              <i class="white fas fa-comment"></i> 12</span
+            >
+          </div>
+        </div>
+        <div class="post">
+          <img src="img/f3.jpg" alt="" />
+          <div class="show">
+            <span
+              ><i class="white fas fa-heart"></i> 22 &nbsp &nbsp
+              <i class="white fas fa-comment"></i> 6</span
+            >
+          </div>
+        </div>
+        <div class="post">
+          <img src="img/f4.jpg" alt="" />
+          <div class="show">
+            <span
+              ><i class="white fas fa-heart"></i> 14 &nbsp &nbsp
+              <i class="white fas fa-comment"></i> 7</span
+            >
+          </div>
+        </div>
+        <div class="post">
+          <img src="img/f5.jpg" alt="" />
+          <div class="show">
+            <span
+              ><i class="white fas fa-heart"></i> 8 &nbsp &nbsp
+              <i class="white fas fa-comment"></i> 1</span
+            >
+          </div>
+        </div>
+        <div class="post">
+          <img src="img/f6.jpg" alt="" />
+          <div class="show">
+            <span
+              ><i class="white fas fa-heart"></i> 54 &nbsp &nbsp
+              <i class="white fas fa-comment"></i> 14</span
+            >
+          </div>
+        </div>
+        <% let i = 1 %> <% photoList.forEach(photo => { %>
+        <div onclick="document.getElementById('<%=i%>').click()" class="post">
+          <a id="<%=(i)%>" href="/username/post/<%= photo.id  %> "></a>
+          <img src="img/uploads/<%= photo.img %> " alt="" />
+          <div class="show">
+            <span
+              ><i class="white fas fa-heart"></i> <%= photo.like %> &nbsp &nbsp
+              <i class="white fas fa-comment"></i> <%= photo.messagesNum %></span
+            >
+          </div>
+          <% i++ %>
+        </div>
+        <% }) %>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <%- include("partials/footer.ejs") %>
+  </body>
+
+  <!-- <script src="js/app.js"></script> -->
+  <%- include("partials/script.ejs") %>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- head -->
+  <%- include("partials/head.ejs") %>
+  <body>
+    <%- include("partials/navigator.ejs") %>
+    <section id="main">
+      <%- include("partials/profile.ejs") %>
+      <div id="table">
+        <a href="/username" class="s1">POSTS</a>
+        <a href="/username/channel" class="s1 active">IGTV</a>
+        <a href="/username/saved" class="s1">SAVED</a>
+        <a href="/username/tagged" class="s1">TAGGED</a>
+      </div>
+      <div class="div-upload">
+        <p>Videos</p>
+        <button class="btn-igtv-upload">Upload</button>
+      </div>
+    </section>
+    <%- include("partials/footer.ejs") %>
+  </body>
+  <%- include("partials/script.ejs") %>
+</html>

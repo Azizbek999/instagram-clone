@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- head -->
+  <%- include("partials/head.ejs") %>
+  <body>
+    <%- include("partials/navigator.ejs") %>
+    <section id="main">
+      <%- include("partials/profile.ejs") %>
+      <div id="table">
+        <a href="/username" class="s1">POSTS</a>
+        <a href="/username/channel" class="s1">IGTV</a>
+        <a href="/username/saved" class="s1 active">SAVED</a>
+        <a href="/username/tagged" class="s1">TAGGED</a>
+      </div>
+      <div class="saved-section">
+        <div class="saved-upper">
+          <div class="saved-upper-info">Only you can see what you've saved</div>
+          <button class="btn-secondary">+ New Collection</button>
+        </div>
+        <div class="saved-center">
+          <div class="saved-center-child">
+            <div class="dic-saved-icon"><i class="far fa-bookmark i-saved"></i></div>
+            <div class="div-h1-save"><h1>Save</h1></div>
+            <div class="saved-center-info">Save photos and videos that you want to see again. No one is notified, and only you can see what you've saved.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <%- include("partials/footer.ejs") %>
+  </body>
+  <%- include("partials/script.ejs") %>
+</html>

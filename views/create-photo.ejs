@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include("partials/head.ejs") %>
+  <body>
+    <!-- Navigator -->
+    <%- include("partials/navigator.ejs") %>
+    <div class="create-all center">
+      <div class="create-all-child">
+        <div class="create-upper">
+          <div class="just-div"></div>
+          <h1 class="h1-new-post">New Post</h1>
+          <a href="/username" class="icon-cancel"
+            ><i class="fas fa-times"></i
+          ></a>
+        </div>
+        <div class="create-main center">
+          <div class="create-main-child">
+            <form
+              action="/username/create/upload"
+              ,
+              method="post"
+              ,
+              enctype="multipart/form-data"
+            >
+              <div class="div-icon-images"><i class="far fa-images"></i></div>
+              <h2>Drag photos and videos here.</h2>
+              <div class="div-btn-upload">
+                <div
+                  class="instead-upload-btn primary"
+                  style="display: block; width: 120px; height: 30px"
+                  onclick="{
+                  document.getElementById('image').click()
+                  }"
+                >
+                  <div>Upload Image</div>
+                </div>
+                <input
+                  type="file"
+                  ,
+                  accept="image/jpeg, image/png"
+                  ,
+                  name="image"
+                  id="image"
+                  style="display: none"
+                  required
+                />
+              </div>
+              <div class="div-description">
+                <label class="label-description" for="description">Description</label>
+                <textarea id="description" , name="description" /></textarea>
+              </div>
+              <div class="craete-submit">
+                <button class="primary submit-image" type="submit">Submit</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

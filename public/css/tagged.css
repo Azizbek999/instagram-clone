@@ -1,0 +1,33 @@
+.tagged-section {
+    display: flex;
+    justify-content: center;
+}
+
+.tagged-section > div {
+    margin: 60px 44px;
+    text-align: center;
+}
+
+.tagged-icon > i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    width: 50px;
+    height: 50px;
+    font-size: 30px;
+    border: 2px solid #262626;
+    border-radius: 50%;
+    color: #262626;
+}
+
+.tagged-section > div > h1 {
+    margin: 24px auto;
+    color: #262626;
+
+}
+
+.info-tag {
+    font-size: 13px;
+    color: #262626;
+}
